@@ -1,21 +1,13 @@
-/* Reset default browser spacing */
+/* ======== General Styles ======= */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;     /* main background */
-    color: white;     /* main text color */
+    background-color: black;  /* page background */
+    color: white;  /* main text color */
 }
 
-/* Header */
-header {
-    background-color: #2c3e50;
-    color: black;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Navigation */
+/* ======= Navigation ======= */
 nav {
     background-color: red;
     padding: 15px 20px;
@@ -27,51 +19,54 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 20px;
+    margin-left: 20px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #ffcc00;   /* optional hover effect */
-    text-decoration: underline;
+    color: black;  /* hover effect */
 }
 
-/* Main content */
+/* ======= Main Section ======= */
 main {
     padding: 40px 20px;
     text-align: center;
 }
 
-/* Section */
-section {
-   background-color: white;
-   padding: 15px;
-   margin-bottom: 20px;
-   border-radius: 5px
+/* Section heading */
+main h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: red;
 }
 
-/* T-Shirts Section */
-.tshirt-container {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 30px;
+/* ======= T-Shirts Section ======= */
+.tshirt-container }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Individual t-shirt cards */
 .tshirt-container div {
-    background-color: #111; /* dark black card background */
+    background-color: black;  /* card background */
     border: 2px solid red;
     border-radius: 15px;
+    padding: 20px;
     width: 250px;
-    box-shadow: 0 4px 10px 
-rgba(255, 0, 0, 0.3);
-    transition: scale(1.05);
+    box-shadow: 0 4px 10px
+rgba(255,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.tshirt-container div: hover {
+    transform: scale(1.05);
 }
 
 /* T-Shirt images */
-.tshirt-container img {
-    max-width: 100%;
+.tshirt.container img {
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 0 auto 15px auto;
@@ -88,17 +83,18 @@ rgba(255, 0, 0, 0.3);
 .tshirt-container p {
     font-size: 14px;
     color: white;
-
-/* Footetr */
-footer {
-   background-color: black;
-   color: white;
-   padding: 20px;
-   text-align: center;
-   border-top: 2px solid red;
 }
 
-/* Responsive */
+/* ======= Footer ======= */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid red;
+}
+
+/* ======= Responsive ======= */
 @media screen and (max-width: 768px) {
     .tshirt-container {
         flex-direction: column;
