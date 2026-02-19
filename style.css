@@ -1,8 +1,10 @@
 /* Reset default browser spacing */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: black;     /* main background */
+    color: white;     /* main text color */
 }
 
 /* Header */
@@ -15,28 +17,32 @@ header {
 
 /* Navigation */
 nav {
-    background-color: #34495e;
-    padding: 10px;
-    text-align: center;
+    background-color: red;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 20px;
     font-weight: bold;
 }
 
 nav a:hover {
+    color: #ffcc00;   /* optional hover effect */
     text-decoration: underline;
 }
 
 /* Main content */
 main {
-    padding: 20px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* Sections */
+/* Section */
 section {
    background-color: white;
    padding: 15px;
@@ -44,18 +50,58 @@ section {
    border-radius: 5px
 }
 
-/* Products */
-.product {
-   border: 1px solid #ccc;
-   padding: 10px;
-   margin-top: 10px;
-   border-radius: 5px;
+/* T-Shirts Section */
+.tshirt-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
 }
+
+/* Individual t-shirt cards */
+.tshirt-container div {
+    background-color: #111; /* dark black card background */
+    border: 2px solid red;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 10px 
+rgba(255, 0, 0, 0.3);
+    transition: scale(1.05);
+}
+
+/* T-Shirt images */
+.tshirt-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+}
+
+/* T-Shirt headings */
+.tshirt-container h3 {
+    margin: 10px 0;
+    color: red;
+}
+
+/* T-Shirt descriptions */
+.tshirt-container p {
+    font-size: 14px;
+    color: white;
 
 /* Footetr */
 footer {
-   background-color: #2c3e50;
+   background-color: black;
    color: white;
+   padding: 20px;
    text-align: center;
-   padding: 10px;
+   border-top: 2px solid red;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .tshirt-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
