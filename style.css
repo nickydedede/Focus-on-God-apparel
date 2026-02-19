@@ -52,9 +52,10 @@ main h2 {
 .tshirt-container div {
     background-color: black;  /* card background */
     border: 2px solid black;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px;
-    width: 250px;
+    width: 150px;  /* reduce from 100% to 150px */
+    height: auto;  /* keeps proportions */
     box-shadow: 0 4px 10px
 rgba(255,0,0,0.3);
     transition: transform 0.3s;
@@ -100,6 +101,7 @@ footer {
         align-items: center;
     }
 }
+
 
 
 
