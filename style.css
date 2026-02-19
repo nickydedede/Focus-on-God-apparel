@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;  /* page background */
-    color: white;  /* main text color */
+    background-color: white;  /* page background */
+    color: black;  /* main text color */
 }
 
 /* ======= Navigation ======= */
 nav {
-    background-color: red;
+    background-color: black;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@ main {
 main h2 {
     font-size: 36px;
     margin-bottom: 30px;
-    color: red;
+    color: black;
 }
 
 /* ======= T-Shirts Section ======= */
@@ -51,7 +51,7 @@ main h2 {
 /* Individual t-shirt cards */
 .tshirt-container div {
     background-color: black;  /* card background */
-    border: 2px solid red;
+    border: 2px solid black;
     border-radius: 15px;
     padding: 20px;
     width: 250px;
@@ -76,13 +76,13 @@ rgba(255,0,0,0.3);
 /* T-Shirt headings */
 .tshirt-container h3 {
     margin: 10px 0;
-    color: red;
+    color: black;
 }
 
 /* T-Shirt descriptions */
 .tshirt-container p {
     font-size: 14px;
-    color: white;
+    color: black;
 }
 
 /* ======= Footer ======= */
@@ -91,7 +91,6 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-    border-top: 2px solid red;
 }
 
 /* ======= Responsive ======= */
@@ -101,5 +100,6 @@ footer {
         align-items: center;
     }
 }
+
 
 
