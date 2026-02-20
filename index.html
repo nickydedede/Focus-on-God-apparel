@@ -5,7 +5,102 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Focus On God Apparel</title>
    <link rel="stylesheet" href="style.css">
+
+   <!-- Google Fonts -->
+   <link href=https://fonts.googleapis.com/css?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"rel="stylesheet">
+
+   <style>
+      /* ====== Variables / Colors ====== */
+      :root {
+         --gold: #FFD700;
+         --deep-blue: #001F3F;
+         --white: #FFFFFF;
+         --earth-tone: #A0522D;
+         --bg-light: FAF9F6;
+      }
+
+      /* ====== Global Styles ====== */
+      * { box-sizing: border-box; margin: 0; padding: 0; font-family: Montserrat', sans-serif; } 
+      body { background: var(--bg-light);
+            color: var(--deep-blue); line-height: 1.6; }
+      a { text-decoration: none; color: inherit; }
+      img { max-width: 100%; display: block; }
+
+      /* ====== Header / Navbar ====== */
+      header { background: var(--deep-blue);
+              color: var(--white); padding: 1rem 2rem;
+              position: sticky; top 0; z-index: 100; }
+                 header .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; }
+                 nav { display: flex; gap 1.5rem; 
+                      float: right; }
+                 nav a { color: var(--gold); }
+
+      /* ====== Hero Section ====== */
+      .hero {
+         background: url('images/hero-banner.jpg') center/cover no-repeat;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 1rem;
+      }
+      .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem; }
+      .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+      .hero .cta-btn {
+         background: var(--gold); color: var(--deep-blue); padding: 0.75rem 2rem;
+         font-weight: 700; border-radius: 5px; 
+         transition: background 0.3s;
+      }
+      .hero .cta-btn:hover { background: var(--white); }
+
+      /* ====== Featured Products ====== */
+      .products { padding: 4rem 2rem;
+   text-align: center; }
+      .products h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem;
+   margin-bottom: 2rem; }
+      .products-grid { display: grid; 
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+      .product-card { background:
+   var(--white); padding: 1rem; border-radius:
+   10px; box-shadow: 0 4px 8px
+   rgba(0,0,0,0.1); transition: transform 0.3s; }
+      .product-card:hover { transform:
+   translateY(-5px); }
+      .product-card h3 { margin: 0.5rem 0; }
+      .product-card button {
+         background: var(--gold); color:
+      var(--deep-blue); border: none; padding: 0.5rem 1rem; border-radius: 5px;
+         cursor: pointer; font-weight: 700;
+      transition: background 0.3s;
+      }
+      .product-card button:hover
+      { background: var(--earth-tone); color: var(--white); }
+
+      /* ====== About Section ====== */
+      .about { padding: 4rem 2rem;
+   background: var(--bg-light); text-align: center; }
+      .about h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem;
+      margin-bottom: 1rem; }
+      .about p { max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+      /* ====== Footer ====== */
+      footer { background: var(--deep-blue);
+   color: var(--white); text-align: center;
+   padding: 2rem; margin-top: 2rem; }
+      footer a { color: var(--gold); margin: 0 0.5rem; font-weight: 600; }
+
+      /* ====== Responsive ====== */
+      @media(max-width:768px) {
+         .hero h1 { font-size: 2.5rem; }
+         .hero p { font-size: 1rem; }
+         nav { display: none; } /* can implemennt mobile menu later */
+      }
+
+</style>
 </head>
+      
 <body>
 
     <!--Header Section-->
@@ -81,6 +176,7 @@
 
 </body>
 </html>
+
 
 
 
