@@ -2,28 +2,38 @@
 <html lang="en">
 <head> 
    <meta charset="UTF-8">
-   <meta name="viewport" 
-   content="width=device-width,
-   initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Focus On God Apparel</title>
    <link rel="stylesheet" href="style.css">
 </head>    
 <body>
 
-   <!-- Hero Section -->
-   <section class="hero">
-      <div class="hero-content">
-         <h1>Welcome to FOCUS ON GOD Apparel</h1>
-         <p>God is doing a new thing, and He is doing it now!</p>
-         <button class="hero-btn"
-   onclick="document.grtElementById('shop').scrollIntoView({ behavior: 'smooth' })">
-            Shop Now
-         </button>
-      </div>
-   </section>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo">FOCUS ON GOD</a>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#shop">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
 
-   <!-- Mission / Scripture Section -->
-<section class="mission">
+<!-- Hero / Home Section -->
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to FOCUS ON GOD Apparel</h1>
+        <p>God is doing a new thing, and He is doing it now!</p>
+        <button class="hero-btn" onclick="document.getElementById('shop').scrollIntoView({ behavior: 'smooth' })">
+            Shop Now
+        </button>
+    </div>
+</section>
+
+<!-- Mission / About Us Section -->
+<section id="about" class="mission">
     <div class="mission-content">
         <h2>Our Mission</h2>
         <p>
@@ -40,47 +50,28 @@
     </div>
 </section>
 
-    <!--Header Section-->
-    <header>
-        <h1>Focus On God Apparel</h1>
-        <p>Wear your Faith boldly</p>
-    </header>
+<!-- Shop Section -->
+<section id="shop">
+   <!-- Your product cards go here -->
+</section>
 
-   <!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#hero" class="nav-logo">FOCUS ON GOD</a>
-        <div class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#shop">Products</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-</nav>
+<!-- Contact Section -->
+<section id="contact">
+   <!-- Contact form / info goes here -->
+</section>
 
-    <!--Navigation-->
-    <nav>
-       
-    <!--Main Content-->
-    <main>
-       <!-- Hero Section -->
-       <section id="home" class="hero">
-          <h1>Focus On God Apparel</h1>
-          <p>Wear your Faith boldly</p>
-          <a href="#collection">Shop Now</a>
-       </section>
-     </main>
-
-       <!-- Footer -->
+<!-- Footer -->
 <footer>
     <p>&copy; 2026 FOCUS ON GOD Apparel. All rights reserved.</p>
     <p>
         Follow us: 
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
     </p>
 </footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
