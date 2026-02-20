@@ -147,9 +147,10 @@ h1, h2, h3 {
 /* Hero Logo */
 .hero-logo {
     display: block;
-    margin: 20px auto; /* centers the logo */
-    width: 150px;  /* adjust size as needed */
-    height: auto;
+    margin: 20px auto; /* centers horizontally */
+    width: 50%;  /* takes up half the screen width */
+    max-width: 400px;  /* caps size on large screens */
+    height: auto;  /* keeps aspect ratio */
 }
 
 .hero-logo:hover {
@@ -326,6 +327,7 @@ footer a:hover {
 html {
     scroll-behavior: smooth;
     }
+
 
 
 
