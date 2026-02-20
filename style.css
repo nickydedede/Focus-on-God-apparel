@@ -46,6 +46,48 @@ nav a:hover {
     color: #ffd700;
 }
 
+/* Hero Section */
+.hero {
+    background: url('assets/
+heo-banner.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4); /* overlay for readability */
+}
+
+.hero-content {
+    position: relative; /* keep constant above overlay */
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .buy-btn {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+}
+
 /* Sections */
 section {
     padding: 40px 20px;
@@ -101,6 +143,7 @@ footer {
         margin: 10px 0;
     }
 }
+
 
 
 
