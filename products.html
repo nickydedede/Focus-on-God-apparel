@@ -101,22 +101,21 @@
               
            </div>
        </section>
-   
 <script>
-function orderOnWhatsApp(productName, price, sizeID) {
+function orderOnWhatsApp(productName, price, sizeId) {
 
-   var size =
-document.getElementById(sizeId).value;
+    var size = document.getElementById(sizeId).value;
 
-   var message = "Hello! I would like to order:\n\n" +
-                 "Product: " + productName + "\n" +
-                 "Price: " + price + "\n" +
-                 "Size: " + size;
-   var phoneNumber + "26778614682"; 
+    var message = "Hello! I would like to order:\n\n" +
+                  "Product: " + productName + "\n" +
+                  "Price: " + price + "\n" +
+                  "Size: " + size;
 
-   var url = "https://wa.me/" + 26778614682 + encodeURIComponent(message);
+    var phoneNumber = "26778614682"; // replace with your real number
 
-   window.open(url, '_blank');
+    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(url, '_blank');
 }
 </script>
    
