@@ -61,8 +61,10 @@ h1, h2, h3 {
     }
 }
 
-/* Buttons */
-.buy-btn {
+/* =========================
+   Buttons
+========================= */
+.buy-btn, .hero-btn {
     display: inline-block;
     background-color: #ffd700; /* gold */
     color: #1e40af;
@@ -70,18 +72,21 @@ h1, h2, h3 {
     padding: 10px 20px;
     border-radius: 8px;
     margin-top: 10px;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.buy-btn:hover {
-    backkground-color: #1e40af;
+.buy-btn:hover, .hero-btn:hover {
+    background-color: #1e40af;
     color: #ffd700;
 }
 
-/* Hero Section */
+/* =========================
+   Hero Section
+========================= */
 .hero {
-    background: url('assets/
-heo-banner.jpg') center/cover no-repeat;
+    background: url('assets/hero-banner.jpg') center/cover no-repeat;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -96,11 +101,11 @@ heo-banner.jpg') center/cover no-repeat;
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.4); /* dark overlay for readability */
+    background-color: rgba(0,0,0,0.4); /* dark overlay */
 }
 
 .hero-content {
-    position: relative; /* keep constant above overlay */
+    position: relative;
     max-width: 800px;
     padding: 20px;
 }
@@ -114,23 +119,6 @@ heo-banner.jpg') center/cover no-repeat;
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-}
-
-.hero .buy-btn {
-    font-size: 1.2rem;
-    padding: 12px 25px;
-    background-color: #ffd700;
-    color: #1e40af;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.hero-btn:hover {
-    background color: #1e40af;
-    color: #ffd700;
 }
 
 /* Responsive Hero */
@@ -148,13 +136,13 @@ heo-banner.jpg') center/cover no-repeat;
 }
 
 /* =========================
-   Mission / Scripture Section
+   Mission / About Us
 ========================= */
 .mission {
     background-color: #fff8f0; /* soft warm background */
     padding: 60px 20px;
     text-align: center;
-    color: #1e40af; /* deep blue text */
+    color: #1e40af;
 }
 
 .mission h2 {
@@ -186,45 +174,31 @@ heo-banner.jpg') center/cover no-repeat;
     color: #1e40af;
 }
 
-.mission .hero-btn {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-}
-
-/* Responsive Mission Section */
-@media (max-width: 600px) {
-    .mission h2 {
-        font-size: 1.8rem;
-    }
-    .mission p, .mission blockquote {
-        font-size: 1rem;
-    }
-}
-
-/* Sections */
+/* =========================
+   Sections
+========================= */
 section {
     padding: 40px 20px;
     text-align: center;
 }
 
-/*Products Grid */
+/* =========================
+   Products Grid
+========================= */
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit,
-minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Premium Product Card */
 .product-card {
     background-color: #ffffff;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease,
-box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
 
@@ -256,7 +230,6 @@ box-shadow 0.3s ease;
 }
 
 /* Size Dropdown */
-
 .size-select {
     width: 100%;
     padding: 10px;
@@ -265,24 +238,18 @@ box-shadow 0.3s ease;
     border: 1px solid #ccc;
     font-size: 1rem;
 }
-    
 
-/* Images */
-.products img {
-    width: 100%
-    max-width: 300px;
-    height: auto;
-    border-radius: 12px;
-}
-
-/* Contact Section */
+/* =========================
+   Contact Section
+========================= */
 .contact a {
     color: #1e40af;
     font-weight: bold;
 }
 
-,contact a:hover {
+.contact a:hover {
     color: #ffd700;
+}
 
 /* =========================
    Footer
@@ -300,19 +267,29 @@ footer a {
     font-weight: bold;
     text-decoration: none;
     margin: 0 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: color 0.3s;
 }
 
 footer a:hover {
     color: #fff;
 }
 
-/* Responsive */
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 600px) {
     nav a {
         display: block;
         margin: 10px 0;
     }
 }
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    }
 
 
 
