@@ -115,6 +115,60 @@ heo-banner.jpg') center/cover no-repeat;
     }
 }
 
+/* =========================
+   Mission / Scripture Section
+========================= */
+.mission {
+    background-color: #fff8f0; /* soft warm background */
+    padding: 60px 20px;
+    text-align: center;
+    color: #1e40af; /* deep blue text */
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.mission blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin: 20px auto 30px auto;
+    position: relative;
+}
+
+.mission blockquote span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.mission .hero-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+/* Responsive Mission Section */
+@media (max-width: 600px) {
+    .mission h2 {
+        font-size: 1.8rem;
+    }
+    .mission p, .mission blockquote {
+        font-size: 1rem;
+    }
+}
+
 /* Sections */
 section {
     padding: 40px 20px;
@@ -213,6 +267,7 @@ footer {
         margin: 10px 0;
     }
 }
+
 
 
 
