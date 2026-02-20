@@ -7,6 +7,13 @@ body {
     color: black;  /* main text color */
 }
 
+/* Brand Title: FOCUS ON GOD heading */
+.brand-title {
+    color: #001F3F; /*deep blue*/
+    font-weight: bold;
+    ffont-size: 2rem; /* optional, adjust to your liking */
+}
+
 /* ======= Navigation ======= */
 nav {
     background-color: black;
@@ -17,7 +24,7 @@ nav {
 }
 
 nav a {
-    color: black;
+    color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
@@ -103,6 +110,7 @@ footer {
         align-items: center;
     }
 }
+
 
 
 
