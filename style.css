@@ -3,113 +3,105 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: white;  /* page background */
-    color: black;  /* main text color */
+    background-color: #fdfcf7;  /* soft warm background */
+    color: #1e40af;  /* deep blue text */
 }
 
-/* Brand Title: FOCUS ON GOD heading */
-.brand-title {
-    color: #001F3F; /*deep blue*/
-    font-weight: bold;
-    font-size: 2rem; /* optional, adjust to your liking */
+h1, h2, h3 {
+    color: #1e40af; /* deep blue headers */
 }
 
-/* ======= Navigation ======= */
+/* Navigation Bar */
 nav {
-    background-color: black;
+    background-color: #1e40af; /* deep blue */
     padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+    color: #fff;
     font-weight: bold;
+    margin: 0 20px
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: black;  /* hover effect */
+    color: #ffd700;  /* gold accent on hover */
 }
 
-/* ======= Main Section ======= */
-main {
+/* Buttons */
+.buy-btn {
+    display: inline-block;
+    background-color: #ffd700; /* gold */
+    color: #1e40af;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buy-btn:hover {
+    backkground-color: #1e40af;
+    color: #ffd700;
+}
+
+/* Sections */
+section {
     padding: 40px 20px;
     text-align: center;
 }
 
-/* Section heading */
-main h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: black;
-}
-
-/* ======= T-Shirts Section ======= */
-.tshirt-container }
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/*Products Grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+minmax(250px, 1fr));
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Individual t-shirt cards */
-.tshirt-container div {
-    background-color: black;  /* card background */
-    color: #001F3F; /* deep blue text */
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 20px;
-    width: 150px;  /* reduce from 100% to 150px */
-    height: { /* remove height */
-    }
-    box-shadow: 0 4px 10px
-rgba(255,0,0,0.3);
-    transition: transform 0.3s;
+.products .redeemed:hover,
+.products .faith it:hover,
+.products .the word ascends:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.tshirt-container div: hover {
-    transform: scale(1.05);
-}
-
-/* T-Shirt images */
-.tshirt.container img {
-    max-width: 50%;
+/* Images */
+.products img {
+    width: 100%
+    max-width: 300px;
     height: auto;
-    display: block;
-    margin: 0 auto 15px auto;
-    border-radius: 10px;
+    border-radius: bold;
 }
 
-/* T-Shirt headings */
-.tshirt-container h3 {
-    margin: 10px 0;
-    color: black;
+/* Contact Section */
+.contact a {
+    color: #1e40af;
+    font-weight: bold;
 }
 
-/* T-Shirt descriptions */
-.tshirt-container p {
-    font-size: 14px;
-    color: black;
-}
+,contact a:hover {
+    color: #ffd700
 
-/* ======= Footer ======= */
+/* Footer */
 footer {
-    background-color: black;
-    color: white;
+    background-color: #1e40af;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-/* ======= Responsive ======= */
-@media screen and (max-width: 768px) {
-    .tshirt-container {
-        flex-direction: column;
-        align-items: center;
+/* Responsive */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
     }
 }
+
 
 
 
