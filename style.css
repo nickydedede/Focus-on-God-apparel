@@ -99,16 +99,43 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit,
 minmax(250px, 1fr));
-    gap: 30px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.products .redeemed:hover,
-.products .faith it:hover,
-.products .the word ascends:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+/* Premium Product Card */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px
+rgba(0,0,0,0.08);
+    transition: transform 0.3s ease,
+box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px
+rgba(0,0,0,0.15);
+}
+
+.price {
+    display: inline-block;
+    background-color: #1e40af;
+    color: #fff;
+    padding: 6px 12px;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
 /* Images */
@@ -143,6 +170,7 @@ footer {
         margin: 10px 0;
     }
 }
+
 
 
 
