@@ -11,7 +11,7 @@ body {
 .brand-title {
     color: #001F3F; /*deep blue*/
     font-weight: bold;
-    ffont-size: 2rem; /* optional, adjust to your liking */
+    font-size: 2rem; /* optional, adjust to your liking */
 }
 
 /* ======= Navigation ======= */
@@ -110,6 +110,7 @@ footer {
         align-items: center;
     }
 }
+
 
 
 
