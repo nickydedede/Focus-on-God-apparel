@@ -55,7 +55,8 @@ main h2 {
     border-radius: 5px;
     padding: 20px;
     width: 150px;  /* reduce from 100% to 150px */
-    height: auto;  /* keeps proportions */
+    height: { /* remove height */
+    }
     box-shadow: 0 4px 10px
 rgba(255,0,0,0.3);
     transition: transform 0.3s;
@@ -101,6 +102,7 @@ footer {
         align-items: center;
     }
 }
+
 
 
 
