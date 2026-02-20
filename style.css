@@ -109,8 +109,7 @@ minmax(250px, 1fr));
     background-color: #ffffff;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 6px 15px
-rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease,
 box-shadow 0.3s ease;
     position: relative;
@@ -118,8 +117,13 @@ box-shadow 0.3s ease;
 
 .product-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px
-rgba(0,0,0,0.15);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.product-card h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .price {
@@ -155,7 +159,7 @@ rgba(0,0,0,0.15);
     width: 100%
     max-width: 300px;
     height: auto;
-    border-radius: bold;
+    border-radius: 12px;
 }
 
 /* Contact Section */
@@ -165,7 +169,7 @@ rgba(0,0,0,0.15);
 }
 
 ,contact a:hover {
-    color: #ffd700
+    color: #ffd700;
 
 /* Footer */
 footer {
@@ -182,6 +186,7 @@ footer {
         margin: 10px 0;
     }
 }
+
 
 
 
