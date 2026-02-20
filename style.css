@@ -121,6 +121,19 @@ h1, h2, h3 {
     margin-bottom: 30px;
 }
 
+/* Hero Logo */
+.hero-logo {
+    display: block;
+    margin: 20px auto; /* centers the logo */
+    width: 150px;  /* adjust size as needed */
+    height: auto;
+}
+
+.hero-logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 /* Responsive Hero */
 @media (max-width: 600px) {
     .hero h1 {
@@ -290,6 +303,7 @@ footer a:hover {
 html {
     scroll-behavior: smooth;
     }
+
 
 
 
