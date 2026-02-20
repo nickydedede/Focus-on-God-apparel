@@ -11,22 +11,54 @@ h1, h2, h3 {
     color: #1e40af; /* deep blue headers */
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #1e40af; /* deep blue */
+/* =========================
+   Navbar
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #1e40af;
     padding: 15px 20px;
-    text-align: center;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-nav a {
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.nav-links a {
     color: #fff;
     font-weight: bold;
-    margin: 0 20px
+    margin-left: 25px;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
-nav a:hover {
-    color: #ffd700;  /* gold accent on hover */
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Mobile Navbar */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    .nav-links a {
+        margin: 10px 0 0 0;
+    }
 }
 
 /* Buttons */
@@ -252,12 +284,26 @@ box-shadow 0.3s ease;
 ,contact a:hover {
     color: #ffd700;
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
     background-color: #1e40af;
     color: #fff;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #fff;
 }
 
 /* Responsive */
@@ -267,6 +313,7 @@ footer {
         margin: 10px 0;
     }
 }
+
 
 
 
