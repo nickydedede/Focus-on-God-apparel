@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: white;  /* page background */
+    background-color: #ADD8E6;  /* page background */
     color: black;  /* main text color */
 }
 
@@ -17,7 +17,7 @@ nav {
 }
 
 nav a {
-    color: light blue;
+    color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
@@ -102,6 +102,7 @@ footer {
         align-items: center;
     }
 }
+
 
 
 
