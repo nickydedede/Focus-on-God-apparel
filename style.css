@@ -107,16 +107,17 @@ h1, h2, h3 {
 /* =========================
    Hero Section
 ========================= */
-.hero {
-    background: url('assets/hero-banner.jpg') center/cover no-repeat;
-    height: 80vh;
+#hero {
+    background-image: url(images/home.png");
+    background-size: cover    
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
-    position: relative;
-}
+    color: white;
 
 .hero::after {
     content: "";
@@ -327,6 +328,7 @@ footer a:hover {
 html {
     scroll-behavior: smooth;
     }
+
 
 
 
