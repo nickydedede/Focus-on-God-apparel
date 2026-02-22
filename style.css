@@ -25,6 +25,7 @@ body {
 
 h1, h2, h3 {
     color: var(--primary-red);
+    margin-bottom: 15px;
 }
 
 /* =========================
@@ -87,6 +88,15 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 0;
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -105,7 +115,6 @@ h1, h2, h3 {
     margin-bottom: 30px;
 }
 
-/* Hero Button */
 .hero-btn {
     font-size: 1.2rem;
     padding: 12px 35px;
@@ -158,39 +167,51 @@ section {
 }
 
 /* =========================
-   Featured / Products
+   Shop / Products
 ========================= */
-.featured-container,
-.products {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+.shop-header {
+    background-color: var(--primary-white);
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.featured-card,
+.shop-header h1 {
+    font-size: 2.8rem;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+}
+
+.shop-header p {
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.products-section {
+    padding: 40px 20px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
 .product-card {
     background-color: var(--primary-white);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    max-width: 300px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    text-align: center;
 }
 
-.featured-card:hover,
 .product-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.featured-card h3,
-.product-card h3 {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--primary-red);
 }
 
 .product-card img {
@@ -199,14 +220,27 @@ section {
     margin-bottom: 15px;
 }
 
+.product-card h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-red);
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: var(--primary-black);
+    margin-bottom: 10px;
+}
+
 .price {
     display: inline-block;
     background-color: var(--primary-red);
     color: var(--primary-white);
     padding: 6px 12px;
     font-weight: bold;
-    margin: 10px 0;
-    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .buy-btn {
@@ -217,6 +251,7 @@ section {
     padding: 10px 20px;
     border-radius: 8px;
     margin-top: 10px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -227,36 +262,34 @@ section {
     transform: translateY(-3px);
 }
 
-/* =========================
-   Why Choose Us Section
-========================= */
-.why-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.why-container div {
-    max-width: 250px;
-}
-
-.why-container h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--primary-red);
-}
-
-.why-container p {
+.size-select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 1rem;
-    color: var(--primary-black);
 }
 
 /* =========================
    Contact Section
 ========================= */
+.contact {
+    background-color: var(--primary-white);
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
 .contact a {
     color: var(--primary-red);
     font-weight: bold;
@@ -297,70 +330,17 @@ footer a:hover {
    Responsive
 ========================= */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-    .hero-btn {
-        font-size: 1rem;
-        padding: 10px 25px;
-    }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1.2rem; }
+    .hero-btn { font-size: 1rem; padding: 10px 25px; }
+    
+    .nav-container { flex-direction: column; }
+    .nav-links a { margin: 10px 0 0 0; }
 
-    .nav-container {
-        flex-direction: column;
-    }
-
-    .nav-links a {
-        margin: 10px 0 0 0;
-    }
-
-    .why-container,
-    .featured-container,
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
+    .products-grid { flex-direction: column; align-items: center; }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .hero h1 { font-size: 1.5rem; }
+    .hero p { font-size: 1rem; }
+   }
