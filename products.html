@@ -99,6 +99,33 @@
               </button>
               
            </div>
+
+           
+           <div class="product-card">
+               <img src="almightygod-hoodie.png" alt="Almighty God Hoodie" width="300">
+               <h3>ALMIGHTY GOD</h3>
+               <span class="price">P350.00</span>
+               <p>Declaring Pssalm 23 over our lives.</p>
+
+              <!-- Size Selection -->
+              <label for="size almighty god">Select Size:</label>
+              <select id="size-almighty-god"
+                 class="size-select">
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                        <option value="XXL">Extra Extra Large (XXL)</option>
+              </select>
+
+              <!-- WhatsApp button -->
+              <button class="buy-btn"
+
+         onclick="orderOnWhatsApp('Almighty God Hoodie', 'P350.00', 'size-almighty-god')">
+                  Buy on WhatsApp
+               </button>
+              
+           </div>
        </section>
 <script>
 function orderOnWhatsApp(productName, price, sizeId) {
