@@ -180,6 +180,33 @@
                </button>
               
            </div>
+
+           
+           <div class="product-card">
+               <img src="the-most-high.png" alt="The Most High T-Shirt" width="300">
+               <h3>THE MOST HIGH</h3>
+               <span class="price">P250.00</span>
+               <p>High quality product at a great price.</p>
+
+              <!-- Size Selection -->
+              <label for="size the most high">Select Size:</label>
+              <select id="size-the-most-high"
+                 class="size-select">
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                        <option value="XXL">Extra Extra Large (XXL)</option>
+              </select>
+
+              <!-- WhatsApp button -->
+              <button class="buy-btn"
+
+         onclick="orderOnWhatsApp('The Most High T-Shirt', 'P250.00', 'size-the-most-highh')">
+                  Buy on WhatsApp
+               </button>
+              
+           </div>
        </section>
 <script>
 function orderOnWhatsApp(productName, price, sizeId) {
