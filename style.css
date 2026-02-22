@@ -80,37 +80,11 @@ h1, h2, h3 {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* move text higher */
     text-align: center;
     color: var(--primary-white);
+    padding-top: 10%; /* adjust vertical position */
     overflow: hidden;
-}
-
-.hero::before,
-.hero::after {
-    content: "✝";
-    position: absolute;
-    font-size: 150px;
-    color: rgba(193, 18, 31, 0.05);
-    z-index: 0;
-    pointer-events: none;
-}
-
-.hero::before {
-    top: 20%;
-    left: 10%;
-    transform: rotate(-15deg);
-}
-
-.hero::after {
-    bottom: 10%;
-    right: 15%;
-    font-size: 200px;
-    transform: rotate(25deg);
-}
-
-.hero::after {
-    content: "✝";
 }
 
 .hero-content {
@@ -158,18 +132,6 @@ h1, h2, h3 {
     background-color: var(--primary-white);
     padding: 60px 20px;
     text-align: center;
-    position: relative;
-}
-
-.mission::before {
-    content: "✝";
-    position: absolute;
-    font-size: 120px;
-    color: rgba(193, 18, 31, 0.03);
-    top: 10%;
-    right: 5%;
-    z-index: 0;
-    pointer-events: none;
 }
 
 .mission h2 {
@@ -215,7 +177,6 @@ section {
     box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    z-index: 1;
 }
 
 .featured-card:hover,
@@ -279,18 +240,6 @@ section {
 
 .why-container div {
     max-width: 250px;
-    position: relative;
-}
-
-.why-container div::before {
-    content: "✝";
-    position: absolute;
-    font-size: 100px;
-    color: rgba(193, 18, 31, 0.03);
-    top: -20px;
-    left: -10px;
-    z-index: 0;
-    pointer-events: none;
 }
 
 .why-container h3 {
@@ -382,7 +331,8 @@ footer a:hover {
     .hero p {
         font-size: 1rem;
     }
-    }
+}
+
 
 
 
