@@ -126,6 +126,33 @@
                </button>
               
            </div>
+
+           
+           <div class="product-card">
+               <img src="jesus-is-king.png" alt="Jesus is King T-Shirt" width="300">
+               <h3>REDEEMED</h3>
+               <span class="price">P250.00</span>
+               <p>He is the King of Kings.</p>
+
+              <!-- Size Selection -->
+              <label for="size jesus is king">Select Size:</label>
+              <select id="size-jesus-is-king"
+                 class="size-select">
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                        <option value="XXL">Extra Extra Large (XXL)</option>
+              </select>
+
+              <!-- WhatsApp button -->
+              <button class="buy-btn"
+
+         onclick="orderOnWhatsApp('Jesus is King T-Shirt', 'P250.00', 'size-jesus-is-king)">
+                  Buy on WhatsApp
+               </button>
+              
+           </div>
        </section>
 <script>
 function orderOnWhatsApp(productName, price, sizeId) {
