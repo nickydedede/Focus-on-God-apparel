@@ -153,6 +153,33 @@
                </button>
               
            </div>
+
+           
+           <div class="product-card">
+               <img src="i've-got-grace.png" alt="I've got grace Hoodie" width="300">
+               <h3>I'VE GOT GRACE</h3>
+               <span class="price">P350.00</span>
+               <p>High quality hoodie at a great price.</p>
+
+              <!-- Size Selection -->
+              <label for="size i've got grace">Select Size:</label>
+              <select id="size-i've-got-grace"
+                 class="size-select">
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                        <option value="XXL">Extra Extra Large (XXL)</option>
+              </select>
+
+              <!-- WhatsApp button -->
+              <button class="buy-btn"
+
+         onclick="orderOnWhatsApp('I've got grace Hoodie', 'P350.00', 'size-redeemed')">
+                  Buy on WhatsApp
+               </button>
+              
+           </div>
        </section>
 <script>
 function orderOnWhatsApp(productName, price, sizeId) {
