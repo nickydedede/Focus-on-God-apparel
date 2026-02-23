@@ -200,38 +200,46 @@ h1, h2, h3 {
 ========================= */
 .carousel-container {
     position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 40px auto;
     overflow: hidden;
+    max-width: 100%;
+    margin: 40px auto;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    scroll-snap-type: x mandatory;
 }
 
 .carousel-item {
-    min-width: 300px;
-    margin: 0 10px;
-    flex-shrink: 0;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    scroll-snap-align: center;
+    box-sizing: border-box;
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 60%;
     border-radius: 12px;
+    margin-bottom: 15px;
 }
 
 .carousel-item h3 {
     font-weight: bold;
-    font-size: 1.2rem;
-    margin: 10px 0 5px 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     color: var(--primary-red);
+    text-align: center;
 }
 
 .carousel-item p {
     font-size: 1rem;
     color: var(--primary-black);
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -239,7 +247,7 @@ h1, h2, h3 {
     display: inline-block;
     background-color: var(--primary-red);
     color: var(--primary-white);
-    padding: 6px 12px;
+    padding: 8px 16px;
     font-weight: bold;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -250,7 +258,7 @@ h1, h2, h3 {
     background-color: var(--primary-red);
     color: var(--primary-white);
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 8px;
     margin-top: 10px;
     cursor: pointer;
@@ -264,7 +272,7 @@ h1, h2, h3 {
     transform: translateY(-3px);
 }
 
-/* Carousel arrows */
+/* Carousel Arrows */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -272,8 +280,8 @@ h1, h2, h3 {
     background-color: var(--primary-red);
     border: none;
     color: var(--primary-white);
-    font-size: 1.5rem;
-    padding: 10px;
+    font-size: 2rem;
+    padding: 10px 15px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
@@ -358,8 +366,7 @@ footer a:hover {
     .nav-container { flex-direction: column; }
     .nav-links a { margin: 10px 0 0 0; }
 
-    .carousel-track { justify-content: center; }
-    .carousel-item { min-width: 80%; margin: 0 10px; }
+    .carousel-item img { width: 80%; }
 }
 
 @media (max-width: 480px) {
@@ -367,5 +374,6 @@ footer a:hover {
     .hero p { font-size: 1rem; }
     .page-header h1 { font-size: 1.8rem; }
     .page-header p { font-size: 1rem; }
-    .carousel-item { min-width: 90%; }
-   }
+    .carousel-item img { width: 90%; }
+    .carousel-item h3 { font-size: 1.2rem; }
+}
