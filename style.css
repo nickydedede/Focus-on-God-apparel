@@ -81,10 +81,10 @@ h1, h2, h3 {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* move text higher */
+    align-items: flex-start; 
     text-align: center;
     color: var(--primary-white);
-    padding-top: 10%; /* adjust vertical position */
+    padding-top: 10%; 
     overflow: hidden;
 }
 
@@ -135,6 +135,43 @@ h1, h2, h3 {
 }
 
 /* =========================
+   Page Headers (Products, About, Contacts)
+========================= */
+.page-header {
+    background-color: var(--primary-white);
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Optional "Premium Christian Brand" badge */
+.page-header::after {
+    content: "Premium Christian Brand";
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    letter-spacing: 1px;
+}
+
+/* =========================
    Mission / About Us
 ========================= */
 .mission {
@@ -159,35 +196,8 @@ h1, h2, h3 {
 }
 
 /* =========================
-   Sections General
+   Shop / Products Section
 ========================= */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* =========================
-   Shop / Products
-========================= */
-.shop-header {
-    background-color: var(--primary-white);
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.shop-header h1 {
-    font-size: 2.8rem;
-    color: var(--primary-red);
-    margin-bottom: 15px;
-}
-
-.shop-header p {
-    font-size: 1.2rem;
-    color: var(--primary-black);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .products-section {
     padding: 40px 20px;
 }
@@ -343,4 +353,6 @@ footer a:hover {
 @media (max-width: 480px) {
     .hero h1 { font-size: 1.5rem; }
     .hero p { font-size: 1rem; }
+    .page-header h1 { font-size: 1.8rem; }
+    .page-header p { font-size: 1rem; }
    }
