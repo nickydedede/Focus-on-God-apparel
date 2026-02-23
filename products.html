@@ -3,207 +3,251 @@
 <head> 
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Focus On God Apparel | Our Collection</title>
+   <title>Focus On God Apparel</title>
    <link rel="stylesheet" href="style.css">
-</head> 
+   <style>
+      :root {
+          --primary-red: #c1121f;
+          --primary-black: #111111;
+          --primary-white: #ffffff;
+      }
 
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: var(--primary-white);
+          color: var(--primary-black);
+      }
+
+      nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: var(--primary-black);
+          font-weight: bold;
+      }
+
+      /* Page Header */
+      .page-header {
+          background-color: var(--primary-white);
+          padding: 60px 20px;
+          text-align: center;
+      }
+
+      .page-header h1 {
+          font-size: 2.8rem;
+          color: var(--primary-red);
+          margin-bottom: 15px;
+      }
+
+      .page-header p {
+          font-size: 1.2rem;
+          color: var(--primary-black);
+          max-width: 800px;
+          margin: 0 auto;
+      }
+
+      /* Carousel */
+      .products-section { padding: 40px 20px; text-align: center; }
+      .carousel { position: relative; max-width: 950px; margin: 0 auto; overflow: hidden; }
+      .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+      .product-card { min-width: 300px; margin: 0 15px; background-color: var(--primary-white); border-radius: 15px; padding: 25px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center; }
+      .product-card img { width: 100%; border-radius: 12px; margin-bottom: 15px; }
+      .product-card h3 { color: var(--primary-red); margin-bottom: 10px; }
+      .product-card p { margin-bottom: 10px; }
+      .price { display: inline-block; background-color: var(--primary-red); color: var(--primary-white); padding: 6px 12px; font-weight: bold; border-radius: 5px; margin-bottom: 10px; }
+      .buy-btn { display: inline-block; background-color: var(--primary-red); color: var(--primary-white); font-weight: bold; padding: 10px 20px; border-radius: 8px; margin-top: 10px; cursor: pointer; transition: all 0.3s ease; }
+      .buy-btn:hover { background-color: var(--primary-black); box-shadow: 0 8px 20px rgba(0,0,0,0.3); transform: translateY(-3px); }
+      .size-select { width: 100%; padding: 10px; margin: 10px 0 15px 0; border-radius: 8px; border: 1px solid #ccc; }
+
+      .prev-btn, .next-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: var(--primary-red); color: var(--primary-white); border: none; font-size: 2rem; padding: 10px; cursor: pointer; border-radius: 50%; z-index: 2; }
+      .prev-btn { left: 10px; }
+      .next-btn { right: 10px; }
+      .prev-btn:hover, .next-btn:hover { background-color: var(--primary-black); }
+
+      /* Responsive */
+      @media (max-width: 768px) { .product-card { min-width: 250px; } }
+      @media (max-width: 480px) { .product-card { min-width: 200px; } }
+   </style>
+</head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-       <a href="index.html">Home</a>
-       <a href="products.html">Products</a>
-       <a href="about.html">About Us</a>
-       <a href="contacts.html">Contacts</a>
-    </nav>
+<nav>
+   <a href="index.html">Home</a>
+   <a href="products.html">Products</a>
+   <a href="about.html">About Us</a>
+   <a href="contacts.html">Contacts</a>
+</nav>
 
-    <!-- Premium Page Header -->
-    <section class="page-header">
-        <div class="page-header-content">
-            <h1>Our Collection</h1>
-            <p>Faith-inspired apparel designed for bold believers.</p>
-            <p class="scripture">"Set your minds on things above." – Colossians 3:2</p>
-        </div>
-    </section>
+<section class="page-header">
+    <h1>Premium Christian Brand</h1>
+    <p>Faith-inspired apparel designed to inspire bold believers.</p>
+</section>
 
-    <!-- Shop Section -->
-    <section id="shop">
-        <h2>Shop Our Collection</h2>
+<section class="products-section">
+  <div class="carousel">
+      <button class="prev-btn">&#10094;</button>
+      <div class="carousel-track">
 
-        <!-- Product 1 -->
-        <div class="product-card">
-            <img src="redeemed.png" alt="Redeemed T-Shirt" width="300">
-            <h3>REDEEMED</h3>
-            <span class="price">P250.00</span>
-            <p>High quality product at a great price.</p>
+          <!-- REDEEMED -->
+          <div class="product-card">
+              <img src="redeemed.png" alt="Redeemed T-Shirt">
+              <h3>REDEEMED</h3>
+              <span class="price">P250.00</span>
+              <p>High quality product at a great price.</p>
+              <label for="size-redeemed">Select Size:</label>
+              <select id="size-redeemed" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('Redeemed T-Shirt','P250.00','size-redeemed')">Buy on WhatsApp</button>
+          </div>
 
-            <label>Select Size:</label>
-            <select id="size-redeemed" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
+          <!-- FAITH IT -->
+          <div class="product-card">
+              <img src="faith-it.png" alt="Faith It T-Shirt">
+              <h3>FAITH IT</h3>
+              <span class="price">P250.00</span>
+              <p>Bold faith-inspired design to keep your spirit strong.</p>
+              <label for="size-faith-it">Select Size:</label>
+              <select id="size-faith-it" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('Faith It T-Shirt','P250.00','size-faith-it')">Buy on WhatsApp</button>
+          </div>
 
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('Redeemed T-Shirt', 'P250.00', 'size-redeemed')">
-                Buy on WhatsApp
-            </button>
-        </div>
+          <!-- THE WORD ASCENDS -->
+          <div class="product-card">
+              <img src="the-word-ascends.png" alt="The Word Ascends T-Shirt">
+              <h3>THE WORD ASCENDS</h3>
+              <span class="price">P250.00</span>
+              <p>Spread the Word and inspire others with this stylish t-shirt.</p>
+              <label for="size-the-word-ascends">Select Size:</label>
+              <select id="size-the-word-ascends" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('The Word Ascends T-Shirt','P250.00','size-the-word-ascends')">Buy on WhatsApp</button>
+          </div>
 
-        <!-- Product 2 -->
-        <div class="product-card">
-            <img src="faith-it.png" alt="Faith It T-Shirt" width="300">
-            <h3>FAITH IT</h3>
-            <span class="price">P250.00</span>
-            <p>Bold faith-inspired design to keep your spirit strong.</p>
+          <!-- ALMIGHTY GOD -->
+          <div class="product-card">
+              <img src="almightygod-hoodie.png" alt="Almighty God Hoodie">
+              <h3>ALMIGHTY GOD</h3>
+              <span class="price">P350.00</span>
+              <p>Declaring Psalm 23 over our lives.</p>
+              <label for="size-almighty-god">Select Size:</label>
+              <select id="size-almighty-god" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('Almighty God Hoodie','P350.00','size-almighty-god')">Buy on WhatsApp</button>
+          </div>
 
-            <label>Select Size:</label>
-            <select id="size-faith-it" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
+          <!-- JESUS IS KING -->
+          <div class="product-card">
+              <img src="jesus-is-king.png" alt="Jesus is King T-Shirt">
+              <h3>JESUS IS KING</h3>
+              <span class="price">P250.00</span>
+              <p>He is the King of Kings.</p>
+              <label for="size-jesus-is-king">Select Size:</label>
+              <select id="size-jesus-is-king" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('Jesus is King T-Shirt','P250.00','size-jesus-is-king')">Buy on WhatsApp</button>
+          </div>
 
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('Faith It T-Shirt', 'P250.00', 'size-faith-it')">
-                Buy on WhatsApp
-            </button>
-        </div>
+          <!-- I'VE GOT GRACE -->
+          <div class="product-card">
+              <img src="i've-got-grace.png" alt="I've got grace Hoodie">
+              <h3>I'VE GOT GRACE</h3>
+              <span class="price">P350.00</span>
+              <p>High quality hoodie at a great price.</p>
+              <label for="size-i've-got-grace">Select Size:</label>
+              <select id="size-i've-got-grace" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('I\'ve got grace Hoodie','P350.00','size-i\'ve-got-grace')">Buy on WhatsApp</button>
+          </div>
 
-        <!-- Product 3 -->
-        <div class="product-card">
-            <img src="the-word-ascends.png" alt="The Word Ascends T-Shirt" width="300">
-            <h3>THE WORD ASCENDS</h3>
-            <span class="price">P250.00</span>
-            <p>Spread the Word and inspire others with this stylish t-shirt.</p>
+          <!-- THE MOST HIGH -->
+          <div class="product-card">
+              <img src="the-most-high.png" alt="The Most High T-Shirt">
+              <h3>THE MOST HIGH</h3>
+              <span class="price">P250.00</span>
+              <p>High quality product at a great price.</p>
+              <label for="size-the-most-high">Select Size:</label>
+              <select id="size-the-most-high" class="size-select">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+              </select>
+              <button class="buy-btn" onclick="orderOnWhatsApp('The Most High T-Shirt','P250.00','size-the-most-high')">Buy on WhatsApp</button>
+          </div>
 
-            <label>Select Size:</label>
-            <select id="size-the-word-ascends" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
+      </div>
+      <button class="next-btn">&#10095;</button>
+  </div>
+</section>
 
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('The Word Ascends T-Shirt', 'P250.00', 'size-the-word-ascends')">
-                Buy on WhatsApp
-            </button>
-        </div>
+<script>
+   function orderOnWhatsApp(productName, price, sizeId) {
+       var size = document.getElementById(sizeId).value;
+       var message = `Hello! I would like to order:\n\nProduct: ${productName}\nPrice: ${price}\nSize: ${size}`;
+       var phoneNumber = "26778614682";
+       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+       window.open(url, '_blank');
+   }
 
-        <!-- Product 4 -->
-        <div class="product-card">
-            <img src="almightygod-hoodie.png" alt="Almighty God Hoodie" width="300">
-            <h3>ALMIGHTY GOD</h3>
-            <span class="price">P350.00</span>
-            <p>Declaring Psalm 23 over our lives.</p>
+   const track = document.querySelector('.carousel-track');
+   const slides = Array.from(track.children);
+   const nextBtn = document.querySelector('.next-btn');
+   const prevBtn = document.querySelector('.prev-btn');
+   let currentIndex = 0;
 
-            <label>Select Size:</label>
-            <select id="size-almighty-god" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
+   function updateCarousel() {
+       const slideWidth = slides[0].getBoundingClientRect().width + 30;
+       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+   }
 
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('Almighty God Hoodie', 'P350.00', 'size-almighty-god')">
-                Buy on WhatsApp
-            </button>
-        </div>
+   nextBtn.addEventListener('click', () => {
+       currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+       updateCarousel();
+   });
 
-        <!-- Product 5 -->
-        <div class="product-card">
-            <img src="jesus-is-king.png" alt="Jesus is King T-Shirt" width="300">
-            <h3>JESUS IS KING</h3>
-            <span class="price">P250.00</span>
-            <p>He is the King of Kings.</p>
+   prevBtn.addEventListener('click', () => {
+       currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+       updateCarousel();
+   });
 
-            <label>Select Size:</label>
-            <select id="size-jesus-is-king" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
-
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('Jesus Is King T-Shirt', 'P250.00', 'size-jesus-is-king')">
-                Buy on WhatsApp
-            </button>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="product-card">
-            <img src="ive-got-grace.png" alt="I've Got Grace Hoodie" width="300">
-            <h3>I'VE GOT GRACE</h3>
-            <span class="price">P350.00</span>
-            <p>Premium hoodie crafted for comfort and confidence.</p>
-
-            <label>Select Size:</label>
-            <select id="size-i-ve-got-grace" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
-
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('Ive Got Grace Hoodie', 'P350.00', 'size-i-ve-got-grace')">
-                Buy on WhatsApp
-            </button>
-        </div>
-
-        <!-- Product 7 -->
-        <div class="product-card">
-            <img src="the-most-high.png" alt="The Most High T-Shirt" width="300">
-            <h3>THE MOST HIGH</h3>
-            <span class="price">P250.00</span>
-            <p>High quality product at a great price.</p>
-
-            <label>Select Size:</label>
-            <select id="size-the-most-high" class="size-select">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Extra Extra Large (XXL)</option>
-            </select>
-
-            <button class="buy-btn"
-                onclick="orderOnWhatsApp('The Most High T-Shirt', 'P250.00', 'size-the-most-high')">
-                Buy on WhatsApp
-            </button>
-        </div>
-
-    </section>
-
-    <!-- WhatsApp Script -->
-    <script>
-    function orderOnWhatsApp(productName, price, sizeId) {
-
-        var size = document.getElementById(sizeId).value;
-
-        var message = "Hello! I would like to order:\n\n" +
-                      "Product: " + productName + "\n" +
-                      "Price: " + price + "\n" +
-                      "Size: " + size;
-
-        var phoneNumber = "26778614682";
-
-        var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-        window.open(url, '_blank');
-    }
-    </script>
+   setInterval(() => {
+       currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+       updateCarousel();
+   }, 4000);
+</script>
 
 </body>
-   </html>
+</html>
