@@ -1,178 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FOCUS ON GOD Apparel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOCUS ON GOD Apparel - Reviews</title>
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+.reviews-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
 
-    <style>
-        /* REVIEWS SECTION */
-        .reviews {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
+.review-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-        .review-form {
-            max-width: 500px;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+.review-form input,
+.review-form textarea,
+.review-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
 
-        .review-form input,
-        .review-form textarea,
-        .review-form select {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-family: inherit;
-        }
+.review-form button {
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .review-form button {
-            padding: 12px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .review-form button:hover {
-            opacity: 0.85;
-        }
-
-        .review-card {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: left;
-        }
-
-        .review-card h4 {
-            margin-bottom: 5px;
-        }
-
-        .review-card p {
-            margin: 5px 0;
-        }
-    </style>
+.review-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+.review-card h4 {
+    margin-bottom: 5px;
+}
+.review-card p {
+    margin: 5px 0;
+}
+</style>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#hero" class="nav-logo">FOCUS ON GOD</a>
-        <div class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="products.html">Products</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-</nav>
+<h2 style="text-align:center; margin-top:50px;">Customer Reviews</h2>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-    <div class="hero-content">
-        <h1>WEAR YOUR FAITH BOLDLY</h1>
-        <p>God is doing a new thing — and He is doing it now.</p>
-        <button class="hero-btn" onclick="document.getElementById('featured').scrollIntoView({behavior:'smooth'})">
-            Shop Now
-        </button>
-    </div>
+<section class="reviews-section">
+
+<form class="review-form" id="reviewForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<textarea id="review" placeholder="Write your review..." required></textarea>
+
+<select id="rating" required>
+<option value="">Select Rating</option>
+<option value="5">⭐⭐⭐⭐⭐ (5)</option>
+<option value="4">⭐⭐⭐⭐ (4)</option>
+<option value="3">⭐⭐⭐ (3)</option>
+<option value="2">⭐⭐ (2)</option>
+<option value="1">⭐ (1)</option>
+</select>
+
+<button type="submit">Submit Review</button>
+</form>
+
+<div id="reviewsContainer"></div>
+
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="mission">
-    <h2>Our Mission</h2>
-    <p>
-        At <strong>FOCUS ON GOD Apparel</strong>, we design fashion rooted in faith, purpose, and identity.
-        Our goal is to inspire believers to represent Christ boldly in everyday life.
-    </p>
-</section>
-
-<!-- FEATURED -->
-<section id="featured" class="featured">
-    <h2>Featured Collection</h2>
-    <div class="featured-container">
-        <div class="featured-card">
-            <h3>Faith Over Fear</h3>
-            <p>Stand firm. Stay fearless.</p>
-        </div>
-        <div class="featured-card">
-            <h3>Grace Wins</h3>
-            <p>Victory through Him.</p>
-        </div>
-        <div class="featured-card">
-            <h3>Stay Focused</h3>
-            <p>Keep your eyes on God.</p>
-        </div>
-    </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-    <h2>Customer Reviews</h2>
-
-    <form class="review-form" id="reviewForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-
-        <textarea id="review" placeholder="Write your review..." required></textarea>
-
-        <select id="rating" required>
-            <option value="">Select Rating</option>
-            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-            <option value="4">⭐⭐⭐⭐ (4)</option>
-            <option value="3">⭐⭐⭐ (3)</option>
-            <option value="2">⭐⭐ (2)</option>
-            <option value="1">⭐ (1)</option>
-        </select>
-
-        <button type="submit">Submit Review</button>
-    </form>
-
-    <div id="reviewsContainer"></div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>
-        WhatsApp:
-        <a href="https://wa.me/26778614682" target="_blank">
-            +267 7861 4682
-        </a>
-    </p>
-
-    <p>
-        Instagram:
-        <a href="https://www.instagram.com/focusongodapparel" target="_blank">
-            @focusongodapparel
-        </a>
-    </p>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 FOCUS ON GOD Apparel | Wear Your Faith Boldly</p>
-</footer>
-
-<!-- REVIEW SCRIPT -->
 <script>
 const form = document.getElementById("reviewForm");
 const container = document.getElementById("reviewsContainer");
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -181,13 +94,11 @@ form.addEventListener("submit", function(e) {
 
     const card = document.createElement("div");
     card.className = "review-card";
-
     card.innerHTML = `
         <h4>${name}</h4>
         <p>${"⭐".repeat(rating)}</p>
         <p>${review}</p>
     `;
-
     container.prepend(card);
 
     form.reset();
