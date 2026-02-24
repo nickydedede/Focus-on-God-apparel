@@ -10,6 +10,54 @@
 
     <!-- Link to your external CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* REVIEWS SECTION */
+        .reviews {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .review-form-container {
+            margin-top: 40px;
+        }
+
+        .review-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+        }
+
+        .review-form textarea {
+            min-height: 120px;
+            resize: none;
+        }
+
+        .review-form button {
+            padding: 12px;
+            border: none;
+            background: black;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .review-form button:hover {
+            opacity: 0.85;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,7 +90,7 @@
     </div>
 </section>
 
-<!-- ABOUT / MISSION -->
+<!-- ABOUT -->
 <section id="about" class="mission">
     <h2>Our Mission</h2>
     <p>
@@ -52,7 +100,7 @@
     </p>
 </section>
 
-<!-- FEATURED COLLECTION -->
+<!-- FEATURED -->
 <section id="featured" class="featured">
     <h2>Featured Collection</h2>
     <div class="featured-container">
@@ -71,47 +119,27 @@
     </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="why">
-    <h2>Why Choose Us?</h2>
-    <div class="why-container">
-        <div class="why-card">
-            <h3>Faith Driven</h3>
-            <p>Every design carries purpose.</p>
-        </div>
-        <div class="why-card">
-            <h3>Quality First</h3>
-            <p>Premium comfort and durability.</p>
-        </div>
-        <div class="why-card">
-            <h3>Bold Identity</h3>
-            <p>Express your belief confidently.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CUSTOMER REVIEWS -->
+<!-- REVIEWS -->
 <section class="reviews">
-    <h2>What Our Customers Say</h2>
+    <h2>Customer Reviews</h2>
+    <p style="margin-bottom:40px;">
+        Be the first to share your experience with FOCUS ON GOD Apparel.
+    </p>
 
-    <div class="reviews-container">
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"The quality is amazing and the message truly reflects my faith."</p>
-            <h4>- Daniel M.</h4>
-        </div>
+    <div class="review-form-container">
+        <h3>Leave a Review</h3>
 
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Fast delivery and excellent service. I will definitely order again."</p>
-            <h4>- Sarah T.</h4>
-        </div>
+        <form action="https://formsubmit.co/waronadedede944@gmail.com" method="POST" class="review-form">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+            
+            <textarea name="review" placeholder="Write your review here..." required></textarea>
 
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Wearing Focus On God makes me feel confident and inspired."</p>
-            <h4>- James K.</h4>
-        </div>
+            <input type="hidden" name="_subject" value="New Website Review Submission">
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit">Submit Review</button>
+        </form>
     </div>
 </section>
 
@@ -138,32 +166,13 @@
     </div>
 </section>
 
-<!-- OTHER COUNTRIES -->
-<section id="other-countries" class="other-countries">
-    <h2>Expanding Globally</h2>
-    <p>
-        We are growing beyond Botswana! Soon, FOCUS ON GOD Apparel will be accessible to young believers worldwide.
-    </p>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-    <h2>Join The Movement</h2>
-    <p>Subscribe to receive exclusive promotions, new arrivals, and stock updates.</p>
-    
-    <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" required>
-        <button type="submit">Subscribe</button>
-    </form>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>
         WhatsApp:
         <a href="https://wa.me/26778614682" target="_blank">
-            +26778614682
+            +267 7861 4682
         </a>
     </p>
 
@@ -178,19 +187,7 @@
 <!-- FOOTER -->
 <footer class="footer">
     <p>© 2026 FOCUS ON GOD Apparel | Wear Your Faith Boldly</p>
-    <div class="footer-links">
-        <a href="#hero">Home</a> |
-        <a href="#about">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="#contact">Contact</a> |
-        <a href="track-orders.html">Track Orders</a> |
-        <a href="delivery-info.html">Delivery Info</a> |
-        <a href="site-map.html">Site Map</a> |
-        <a href="faqs.html">FAQs</a> |
-        <a href="policies.html">Policies</a>
-    </div>
 </footer>
 
 </body>
 </html>
-
