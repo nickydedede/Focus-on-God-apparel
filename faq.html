@@ -39,7 +39,7 @@
     </div>
     <div class="faq-item">
         <h3>Can I return or exchange an item?</h3>
-        <p>Yes, items can be returned or exchanged within 7 days of delivery if unworn and in original condition.</p>
+        <p>No, items cannot be returned or exchanged.</p>
     </div>
     <div class="faq-item">
         <h3>How do I contact customer support?</h3>
@@ -57,6 +57,26 @@
         <a href="index.html#contact">Contact</a>
     </div>
 </footer>
+
+    <script>
+
+        const faqs = document.querySelectorAll(".faq-question");
+
+        faqs.forEach(button => {
+            button.addEventListener("click", () => {
+
+                const answer = button.nextElementSibling;
+
+                if(answer.style.display === "block"){
+                    answer.style.display = none";
+                } else {
+                    answer.style.display = "block";
+                }
+
+            });
+        });
+
+    </script>
 
 </body>
 </html>
