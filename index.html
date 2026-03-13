@@ -5,65 +5,9 @@
     <title>FOCUS ON GOD Apparel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* REVIEWS SECTION */
-        .reviews {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .review-form {
-            max-width: 500px;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .review-form input,
-        .review-form textarea,
-        .review-form select {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-family: inherit;
-        }
-
-        .review-form button {
-            padding: 12px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .review-form button:hover {
-            opacity: 0.85;
-        }
-
-        .review-card {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: left;
-        }
-
-        .review-card h4 {
-            margin-bottom: 5px;
-        }
-
-        .review-card p {
-            margin: 5px 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -167,32 +111,9 @@
     <p>© 2026 FOCUS ON GOD Apparel | Wear Your Faith Boldly</p>
 </footer>
 
-<!-- REVIEW SCRIPT -->
-<script>
-const form = document.getElementById("reviewForm");
-const container = document.getElementById("reviewsContainer");
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const review = document.getElementById("review").value;
-    const rating = document.getElementById("rating").value;
-
-    const card = document.createElement("div");
-    card.className = "review-card";
-
-    card.innerHTML = `
-        <h4>${name}</h4>
-        <p>${"⭐".repeat(rating)}</p>
-        <p>${review}</p>
-    `;
-
-    container.prepend(card);
-
-    form.reset();
-});
-</script>
 
 </body>
 </html>
+
