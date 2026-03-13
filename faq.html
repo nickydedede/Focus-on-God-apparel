@@ -1,82 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs | FOCUS ON GOD Apparel</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs | FOCUS ON GOD Apparel</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Your custom CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVIGATION -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">FOCUS ON GOD</a>
-        <div class="nav-links">
-            <a href="index.html#hero">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="products.html">Products</a>
-            <a href="index.html#contact">Contact</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">FOCUS ON GOD</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <!-- PAGE HEADER -->
-<section class="page-header">
-    <h1>Frequently Asked Questions</h1>
-    <p>Answers to common queries about our products and services.</p>
+<section class="text-center py-5 bg-light">
+  <div class="container">
+    <h1 class="mb-3">Frequently Asked Questions</h1>
+    <p class="lead">Answers to common queries about our products and services.</p>
+  </div>
 </section>
 
-<!-- FAQ CONTENT -->
-<section class="mission">
-    <div class="faq-item">
-        <h3>How can I place an order?</h3>
-        <p>Use the “Buy on WhatsApp” buttons on the Products page to place your order directly with us.</p>
+<!-- FAQ SECTION -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            How can I place an order?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Use the “Buy on WhatsApp” buttons on the Products page to place your order directly with us.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            What payment methods do you accept?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We currently accept mobile money payments via local networks. Other options coming soon.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            Can I return or exchange an item?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No, items cannot be returned or exchanged.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            How do I contact customer support?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Reach out via WhatsApp: <a href="https://wa.me/26778614682" target="_blank">+267 7861 4682</a> or Instagram: <a
+              href="https://www.instagram.com/focusongodapparel" target="_blank">@focusongodapparel</a> for assistance.
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="faq-item">
-        <h3>What payment methods do you accept?</h3>
-        <p>We currently accept mobile money payments via local networks. Other options coming soon.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Can I return or exchange an item?</h3>
-        <p>No, items cannot be returned or exchanged.</p>
-    </div>
-    <div class="faq-item">
-        <h3>How do I contact customer support?</h3>
-        <p>Reach out via WhatsApp +267 7861 4682 or Instagram @focusongodapparel for assistance.</p>
-    </div>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 FOCUS ON GOD Apparel | Wear Your Faith Boldly</p>
-    <div class="footer-links">
-        <a href="index.html#hero">Home</a> |
-        <a href="index.html#about">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="index.html#contact">Contact</a>
-    </div>
+<footer class="bg-dark text-white text-center py-3">
+  <p>© 2026 FOCUS ON GOD Apparel | Wear Your Faith Boldly</p>
+  <div>
+    <a class="text-decoration-none text-white" href="index.html#hero">Home</a> |
+    <a class="text-decoration-none text-white" href="index.html#about">About</a> |
+    <a class="text-decoration-none text-white" href="products.html">Products</a> |
+    <a class="text-decoration-none text-white" href="index.html#contact">Contact</a>
+  </div>
 </footer>
 
-    <script>
-
-        const faqs = document.querySelectorAll(".faq-question");
-
-        faqs.forEach(button => {
-            button.addEventListener("click", () => {
-
-                const answer = button.nextElementSibling;
-
-                if(answer.style.display === "block"){
-                    answer.style.display = none";
-                } else {
-                    answer.style.display = "block";
-                }
-
-            });
-        });
-
-    </script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
